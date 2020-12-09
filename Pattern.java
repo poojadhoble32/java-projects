@@ -1,86 +1,42 @@
-package pattern;
+import java.util.*;
 
-public class Pattern {
-    void Pattern(int Row,int Col)
-    {
-    	/*for(int i=1;i<=Row;i++)
-    	{
-    		for(int j=1;j<=i;j++)
-    		{
-    			System.out.print(j+"\t");
-    		}
-    		System.out.println();
-    	}*/
-    	
-    	/*for(int i=1;i<=Row;i++)
-    	{
-    		for(int j=i;j>=1;j--)
-    		{
-    			System.out.print(j+"\t");
-    		}
-    		System.out.println();
-    	}*/
-    	
-    	/*for(int i=1;i<=Row;i++)
-    	{
-    		
-    		for(int j=i;j>=1;j--)
-    		{
-    			if(j%2==0)
-    			{
-    				System.out.print("0\t");
-    			}
-    			else
-    			{
-    				System.out.print("1\t");
-    			}
-    			
-    		}
-    		System.out.println();
-    	}*/
-    	
-    	/*for(int i=1;i<=Row;i++)
-    	{
-    		
-    		for(int j=1;j<=i;j++)
-    		{
-    			if(j%2==0)
-    			{
-    				System.out.print("0\t");
-    			}
-    			else
-    			{
-    				System.out.print("1\t");
-    			}
-    			
-    		}
-    		System.out.println();
-    	}*/
-    	int k=0;
-    	for(int i=1;i<=Row;i++)
-    	{
-    		
-    		int m=i;
-    		int n=1;
-    		for(int j=1;j<=(k+i);j++)
-    		{
-    			
-    			if(j<=i)
-    			{
-    				System.out.print(m+"\t");
-    				m--;
-    			}
-    			else
-    			{
-    				n++;
-    				System.out.print(n+"\t");
-    				 
-    			}
-    			
-    		}
-    		k++;
-    		System.out.println();
-    	}
-    }
-	
+class Demo1
+{
+public void DisplayPattern(int Row,int Col)
+{
+for(int i=0;i<Row;i++)
+{
+for(int j=0;j<Col;j++)
+{
+if((j%2)==0)
+{
+System.out.print("*\t");
+}
+else
+{
+System.out.print("#\t");
+}
+}
+System.out.println();
+
+}
+}
+}
+
+class Pattern
+{
+public static void main(String arg[])
+{
+Scanner sobj=new Scanner(System.in);
+
+System.out.println("enter number of rows");
+int iRow=sobj.nextInt();
+
+System.out.println("enter number of coloumns");
+int iCol=sobj.nextInt();
+
+Demo1 dobj=new Demo1();
+
+dobj.DisplayPattern(iRow,iCol);
+}
 }
